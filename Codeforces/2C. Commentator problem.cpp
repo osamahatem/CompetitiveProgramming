@@ -7,6 +7,8 @@
  
 /*
 http://codeforces.com/blog/entry/109
+What the author meant by the angle of observation was not explained in the
+problem statement.
 */
 
 #include <bits/stdtr1c++.h>
