@@ -12,7 +12,7 @@ an answer that is at least as good.
 Given this info, we try all lines formed by all pairs of vertices, and for each
 we calculate the earliest point at which it exits the pipe. The answer is the
 largest x-coordinates of these points.
-Complexity O(N^2).
+Complexity O(N^3).
 */
 
 #include <bits/stdtr1c++.h>
