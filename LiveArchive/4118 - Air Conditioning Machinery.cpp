@@ -38,7 +38,7 @@ bool valid(int x, int y, int z) {
 int solve(int x, int y, int z, int d, int dpth) {
 	if (x == ex && y == ey && z == ez && d == ed)
 		return dpth;
-	if (!valid(x, y, z) || dpth > 6)
+	if (!valid(x, y, z) || dpth >= 6)
 		return 10;
 
 	vis[x][y][z] = 1;
