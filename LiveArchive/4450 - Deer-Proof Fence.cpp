@@ -57,7 +57,6 @@ myf dp[1 << 9];
 myf CHP(vector<point> P) {
 	int sz = P.size(), k = 0;
 	vector<point> H(2 * sz);
-	sort(P.begin(), P.end());
 	for (int i = 0; i < sz; ++i) {
 		while (k >= 2
 				&& cross(VEC(H[k - 2], H[k - 1]), VEC(H[k - 2], P[i])) < EPS)
@@ -112,6 +111,7 @@ int main() {
 		memset(vis, 0, sizeof vis);
 		for (int i = 0; i < n; i++)
 			cin >> p[i].x >> p[i].y;
+		sort(p, p + n);
 		cout << "Case " << ++T << ": length = " << solve((1 << n) - 1) << endl;
 	}
 	return 0;
