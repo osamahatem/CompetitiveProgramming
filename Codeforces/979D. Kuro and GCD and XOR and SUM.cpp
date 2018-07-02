@@ -68,6 +68,8 @@ int main() {
 		if (t == 1) {
 			if (vis[x])
 				continue;
+			vis[x] = true;
+
 			for (int i = 1; i * i <= x; i++) {
 				if (x % i)
 					continue;
