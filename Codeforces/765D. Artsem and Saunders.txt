@@ -1,0 +1,22 @@
+g(h(1)) = 1
+g(h(x)) = x
+
+
+
+h(g(1)) = f(1)
+h(g(2)) = f(2)
+
+
+if 	g(x) == g(y)
+then	f(x) == f(y)
+
+if	h(x) == h(y)
+then	x == y
+
+
+h(x) is position of x in g
+g(x) is position of f(x) in h
+
+let h(x) = y
+g(y) = x
+h(x) = f(y) = y

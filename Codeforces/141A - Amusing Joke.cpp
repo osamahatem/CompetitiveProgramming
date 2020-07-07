@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+    char c;
+    int counter[26],i,flag=0;
+    for(i=0;i<26;i++)
+    {
+        counter[i]=0;
+    }
+    for(i=0;i<2;i++)
+    {
+        while(1)
+        {
+            scanf("%c",&c);
+            if(c=='\n')
+            {
+                break;
+            }
+            counter[c-65]++;
+        }
+    }
+    while(1)
+    {
+        scanf("%c",&c);
+        if(c=='\n')
+        {
+            break;
+        }
+        counter[c-65]--;
+    }
+    for(i=0;i<26;i++)
+    {
+        if(counter[i]!=0)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==1)
+    {
+        printf("NO\n");
+    }
+    else
+    {
+        printf("YES\n");
+    }
+}

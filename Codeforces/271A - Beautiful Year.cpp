@@ -1,0 +1,45 @@
+#include<stdio.h>
+
+main()
+{
+    int y,c,c1,c2,year[4],check;
+    scanf("%d",&y);
+    c=y;
+    while(c>=y)
+    {
+        check=0;
+        c++;
+        year[0]={c/1000};
+        year[1]={(c/100)%10};
+        year[2]={(c/10)%10};
+        year[3]={c%10};
+        for(c1=0;c1<=3;c1++)
+        {
+            for(c2=0;c2<=3;c2++)
+            {
+                if(c1==c2)
+                {
+                    c2++;
+                    if(c2>3)
+                    {
+                        break;
+                    }
+                }
+                if(year[c1]==year[c2])
+                {
+                    check=1;
+                    break;
+                }
+            }
+            if(check==1)
+            {
+                break;
+            }
+        }
+        if(check==0)
+        {
+            printf("%d\n",c);
+            break;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+x y
+y -x
+-x -y
+-y x
+x y
+
+a b
+
+a+x	b+y
+a+y	b-x
+a-x	b-y
+a-y	b+x
+
++a	+b
+-b	+a
+-a	-b
++b	-a
+
+
+x + p1 * a + p2 * b == xx
+y + p1 * b - p2 * a == yy
+
+
+p1 a + p2 b == xx - x
+p1 b - p2 a == yy - y
+
+p1 = (yy - y + p2 a) / b
+
+(yy - y + p2 * a) * a / b + p2 * b = xx - x
+
+yy * a / b - y * a / b + p2 *a*a/b + p2 * b = xx - x
+
+p2 * (a * a / b + b) = xx - x + (y - yy) * a / b
+
+p2 = (xx - x + (y - yy) * a / b) / (a * a / b + b) 
+
+p2 = ((xx - x) * b + (y - yy) * a) / (a * a + b * b)
